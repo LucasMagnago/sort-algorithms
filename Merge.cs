@@ -44,7 +44,8 @@ namespace AlgoritmosOrdenacao
                 {
                     // Se o elemento da sublista direita for menor, copia para a lista original
                     arr[arrIndex++] = rightArray[rightIndex++];
-                    swaps += leftArray.Length - leftIndex; 
+                    
+                    swaps++;
                 }
             }
 
