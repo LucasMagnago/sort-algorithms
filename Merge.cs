@@ -31,24 +31,30 @@ namespace AlgoritmosOrdenacao
         {
             int leftIndex = 0, rightIndex = 0, arrIndex = 0;
 
+            // Enquanto houver elementos em ambas as sublistas
             while (leftIndex < leftArray.Length && rightIndex < rightArray.Length)
             {
+                // Compara os elementos atuais das sublistas
                 if (String.Compare(leftArray[leftIndex], rightArray[rightIndex]) < 0)
                 {
+                    // Se o elemento da sublista esquerda for menor, copia para a lista original
                     arr[arrIndex++] = leftArray[leftIndex++];
                 }
                 else
                 {
+                    // Se o elemento da sublista direita for menor, copia para a lista original
                     arr[arrIndex++] = rightArray[rightIndex++];
-                    swaps += leftArray.Length - leftIndex; // Contabiliza as operações de troca
+                    swaps += leftArray.Length - leftIndex; 
                 }
             }
 
+            // Copia os elementos restantes da sublista esquerda, se houver
             while (leftIndex < leftArray.Length)
             {
                 arr[arrIndex++] = leftArray[leftIndex++];
             }
 
+            // Copia os elementos restantes da sublista direita, se houver
             while (rightIndex < rightArray.Length)
             {
                 arr[arrIndex++] = rightArray[rightIndex++];
